@@ -32,31 +32,10 @@ The API applies the included EF migration during startup. Open [http://localhost
 2. Call `POST /api/sync?useDummy=true` to test the dummy response with missing and additional JSON fields.
 3. Call `GET /api/platforms` or `GET /api/wells` to verify the records stored in LocalDB.
 
-### Option 2: Console application
 
-From the repository directory:
-
-PowerShell:
-
-```powershell
-$env:AEM_API_USERNAME = 'user@aemenersol.com'
-$env:AEM_API_PASSWORD = 'Test@123'
-dotnet tool restore
-dotnet restore
-dotnet run
-```
-
-The console app applies the included EF migration automatically and exits after the sync completes. Run it again to exercise the update path. To verify tolerance of missing/changed fields with the supplied dummy endpoint:
-
-```powershell
-dotnet run -- --dummy
-```
 
 The API remains running until stopped with `Ctrl+C`.
 
-
-
-For either option, optional overrides are `AEM_CONNECTION_STRING` and `AEM_API_BASE_URL`. The Web API also reads the same defaults from `AemenersolSync.Api\appsettings.json`.
 
 
 
