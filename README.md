@@ -56,14 +56,6 @@ The API remains running until stopped with `Ctrl+C`.
 
 For either option, optional overrides are `AEM_CONNECTION_STRING` and `AEM_API_BASE_URL`. The Web API also reads the same defaults from `AemenersolSync.Api\appsettings.json`.
 
-## Design notes
-
-- API credentials are environment variables and are never committed.
-- Database IDs use `ValueGeneratedNever`; they are the API IDs used for insert/update decisions.
-- Platforms and wells are loaded in batches before applying changes, avoiding a query per record.
-- DTO properties are nullable where an API field may be absent. Unknown JSON fields are ignored, and a missing `well` collection is treated as empty.
-- The dummy response omits `createdAt`/`updatedAt` and adds `lastUpdate`; it therefore validates both missing-field and unknown-field behavior.
-- Records absent from a response are retained because the requirement specifies upserts, not snapshot deletion.
 
 
 ###
