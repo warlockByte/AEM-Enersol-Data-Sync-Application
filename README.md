@@ -27,6 +27,16 @@ dotnet run -- --dummy
 
 Optional overrides are `AEM_CONNECTION_STRING` and `AEM_API_BASE_URL`.
 
+## Web API and Swagger
+
+The solution also contains an ASP.NET Core Web API. After setting the same credential environment variables, run:
+
+```powershell
+dotnet run --project AemenersolSync.Api
+```
+
+Open `http://localhost:5097/swagger`. Use `POST /api/sync` with `useDummy=false` for the actual payload or `true` for the compatibility payload. Use `GET /api/platforms` and `GET /api/wells` to inspect LocalDB data.
+
 ## Design notes
 
 - API credentials are environment variables and are never committed.

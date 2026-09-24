@@ -19,4 +19,10 @@
     <None Update="appsettings.json" CopyToOutputDirectory="PreserveNewest" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Compile Remove="AemenersolSync.Api\**\*.cs" />
+    <Content Remove="AemenersolSync.Api\**\*" />
+    <None Remove="AemenersolSync.Api\**\*" />
+  </ItemGroup>
+
 </Project>
