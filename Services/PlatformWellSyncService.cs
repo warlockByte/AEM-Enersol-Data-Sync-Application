@@ -39,6 +39,7 @@ public sealed class PlatformWellSyncService(SyncDbContext dbContext)
                 }
                 else wellsUpdated++;
                 well.PlatformId = item.Id;
+                well.Platform = platform;
                 if (wellItem.UniqueName is not null) well.UniqueName = wellItem.UniqueName;
                 if (wellItem.Latitude.HasValue) well.Latitude = wellItem.Latitude;
                 if (wellItem.Longitude.HasValue) well.Longitude = wellItem.Longitude;
