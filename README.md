@@ -18,6 +18,8 @@
 
 From the repository directory, start the API project:
 
+PowerShell:
+
 ```powershell
 $env:AEM_API_USERNAME = 'user@aemenersol.com'
 $env:AEM_API_PASSWORD = 'Test@123'
