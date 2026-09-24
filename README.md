@@ -14,7 +14,7 @@
 
 ## Choose how to run
 
-### Option 1: Web API and Swagger
+### Web API and Swagger
 
 From the repository directory, start the API project:
 
