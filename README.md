@@ -12,8 +12,8 @@
 PowerShell:
 
 ```powershell
-$env:AEM_API_USERNAME = 'user@aemenersol.com'
-$env:AEM_API_PASSWORD = 'Test@123'
+$env:AEM_API_USERNAME = '<supplied username>'
+$env:AEM_API_PASSWORD = '<supplied password>'
 dotnet tool restore
 dotnet restore
 dotnet run
